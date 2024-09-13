@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dog Is The Dev</title>
+    <link
+    rel="icon"
+    type="image/png"
+    href="https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/logo.jpg"
+    />
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fad604;
+        }
+        .full-width-image {
+            width: 100%;
+            height: 50px;
+            background-size: cover;
+            background-position: center;
+        }
+        .top-image {
+            background-image: url('https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/dolla.png');
+        }
+        .bottom-image {
+            background-image: url('https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/dolla.png');
+        }
+        .logo {
+            margin: 20px 0;
+            z-index: 2;
+        }
+        .small-images {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .small-images img {
+            margin: 0 10px;
+            width: 150px;
+            height: 150px;
+        }
+        .CA {
+            font-size: 15px;
+            color: red;
+            font-weight: bold;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            line-height: 1.4;
+        }
+       
+        .buttons {
+            margin: 20px 0;
+             z-index: 2;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        .buttons button:nth-child(1) {
+            background-color: #ff5a5f;
+            color: white;
+            border: none;
+        }
+        .buttons button:nth-child(2) {
+            background-color: #00a699;
+            color: white;
+            border: none;
+        }
+        .buttons button:nth-child(3) {
+            background-color: #fc642d;
+            color: white;
+            border: none;
+        }
+      
+        .buttons button:hover {
+            background-color: white;
+            color: black; 
+            border: 1px solid black;
+        }
+        .socials {
+            margin: 20px 0;
+        }
+        .socials img {
+            margin: 0 10px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .legal {
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            line-height: 1.4;
+        }
+      
+        .random-image {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-image: url('https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/eth.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="full-width-image top-image"></div>
+    <div>
+        <img src="https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/dog1.png" alt="Logo" class="logo" width="200">
+    </div>
+    <div class="small-images">
+        <img src="https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/dev.png" alt="Image 1">
+    </div>
+    <img src="https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/mydog1.png" alt="Image 2">
+    
+    <div class="CA">
+      <p>
+        CA: 0x00000000000000000000000000000000
+      </p>
+    </div>
+    <div class="buttons">
+        <button onclick="window.open('', '_blank');">BUY NOW</button>
+    </div>
+    <div class="socials">
+        <img src="https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/x.svg" alt="Social 1" onclick="window.open('https://twitter.com/dogisthedev_eth', '_blank');">
+        <img src="https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/tg.svg" alt="Social 2" onclick="window.open('https://t.me/dogisthedev_eth', '_blank');">
+        <img src="https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/ds.svg" alt="Social 3" onclick="window.open('https://dexscreener.com/ethereum/', '_blank');">
+        <img src="https://cdn.glitch.global/dd902416-7324-4df5-9ec9-bf6d78b57adc/dt.svg" alt="Social 4" onclick="window.open('https://www.dextools.io/app/en/ether/pair-explorer/', '_blank');">
+    </div>
+    <div class="legal">
+        <p>Legal Disclaimer:</p>
+        <p>$DEV is a meme coin with no intrinsic value or expectation of financial return. </p>
+        <p>$DEV is completely useless and for entertainment purposes only.</p>
+        <p>By purchasing $DEV, you agree that you have seen and understood this disclaimer.</p>
+    </div>
+    <div class="full-width-image bottom-image"></div>
+  
+   <script>
+        function createRandomImage() {
+            const img = document.createElement('div');
+            img.classList.add('random-image');
+            document.body.appendChild(img);
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            img.style.left = `${x}px`;
+            img.style.top = `${y}px`;
+        }
+        for (let i = 0; i < 200; i++) {
+            createRandomImage();
+        }
+    </script>
+
+</body>
+</html>
